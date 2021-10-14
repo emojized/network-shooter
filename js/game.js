@@ -5,7 +5,6 @@ class SimpleGame extends netplayjs.Game {
       // Initialize our player positions.
       this.aPos = { x: 100, y: 150 };
       this.bPos = { x: 500, y: 150 };
-      this.cPos = { x: 300, y: 150 };
     }
   
     // The tick function takes a map of Player -> Input and
@@ -31,10 +30,7 @@ class SimpleGame extends netplayjs.Game {
           this.bPos.x += vel.x * 5;
           this.bPos.y -= vel.y * 5;
         }
-        else if (player.getID() == 2) {
-            this.cPos.x += vel.x * 5;
-            this.cPos.y -= vel.y * 5;
-          }
+       
       }
     }
   
@@ -57,8 +53,7 @@ class SimpleGame extends netplayjs.Game {
       ctx.fillRect(this.aPos.x - 5, this.aPos.y - 5, 10, 10);
       ctx.fillStyle = "blue";
       ctx.fillRect(this.bPos.x - 5, this.bPos.y - 5, 10, 10);
-      ctx.fillStyle = "green";
-      ctx.fillRect(this.cPos.x - 5, this.cPos.y - 5, 10, 10);
+
     }
   }
   
